@@ -9,6 +9,16 @@ class DiceController < ApplicationController
     render({:template => "dice_templates/1d20"})
   end
 
+  def five_four
+    @dice_rolls = Array.new
+    5.times do
+      new_roll = rand(1..4)
+      @dice_rolls.push(new_roll)
+    end
+
+    render({:template => "dice_templates/5d4"})
+  end
+
   def home
     render({:template => "dice_templates/home"})
   end
