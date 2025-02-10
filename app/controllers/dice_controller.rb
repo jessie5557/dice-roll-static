@@ -5,4 +5,11 @@ class DiceController < ApplicationController
   def two_ten
     render({:template => "dice_templates/2d10"})
   end
+  def one_twenty
+    render({:template => "dice_templates/1d20"})
+  end
+
+  def home
+    render({:template => "dice_templates/home"})
+  end
 end
